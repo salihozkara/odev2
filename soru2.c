@@ -29,17 +29,10 @@ int SayiUret ( int dizi[8][6])
     DosyayaYazdir(dizi);
 }
 void LotoEkranaYazdir(int dizi[8][6]) {
-    FILE *dosya;
-    dosya=fopen("kupon.txt","r");
-    for (int j = 0; j < 6; ++j) {
-        fscanf(dosya,"%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\n", &dizi[0][j], &dizi[1][j], &dizi[2][j], &dizi[3][j], &dizi[4][j],
-               &dizi[5][j], &dizi[6][j], &dizi[7][j]);
-    }
     for (int j = 0; j < 6; ++j) {
         printf("%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\n", dizi[0][j], dizi[1][j], dizi[2][j], dizi[3][j], dizi[4][j],
                dizi[5][j], dizi[6][j], dizi[7][j]);
     }
-    fclose(dosya);
 }
 void DosyayaYazdir(int dizi[8][6])
 {
